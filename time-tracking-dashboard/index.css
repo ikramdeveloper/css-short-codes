@@ -1,0 +1,239 @@
+:root {
+    /* main card */
+    --blue: hsl(246, 80%, 60%);
+    /* work */
+    --light-red: hsl(15, 100%, 70%);
+    /* play */
+    --soft-blue: hsl(195, 74%, 62%);
+    /* study */
+    --red: hsl(348, 100%, 68%);
+    /* exercise */
+    --lime-green: hsl(145, 58%, 55%);
+    /* social */
+    --violet: hsl(264, 64%, 52%);
+    /* self care */
+    --soft-orange: hsl(43, 84%, 65%);
+    /* background */
+    --very-dark-blue: hsl(226, 43%, 10%);
+    /* card bottom */
+    --dark-blue: hsl(235, 46%, 20%);
+    /* none clicke color */
+    --desaturated-blue: hsl(235, 45%, 61%);
+    /* text color  */
+    --pale-blue: hsl(236, 100%, 87%);
+    --card-padding: 10% 10%;
+}
+* {
+    box-sizing: border-box;
+    font-family: "Rubik";
+    user-select: none;
+}
+body {
+    margin: 0;
+    background-color: var(--very-dark-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard {
+    padding: 50px 0;
+    width: 1000px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+}
+.dashboard-right {
+    display: grid;
+    gap: 20px;
+    grid-template-rows: repeat(2, 1fr);
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card__header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.card__owner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background-color: var(--dark-blue);
+}
+.owner {
+    width: 100%;
+    height: 70%;
+    background-color: var(--blue);
+    border-radius: 10px;
+    padding: var(--card-padding);
+}
+#owner {
+    width: 80px;
+    height: 80px;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-bottom: 40px;
+}
+.caption {
+    font-size: 14px;
+    color: var(--pale-blue);
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.hilight {
+    color: white;
+    font-weight: 300;
+    margin-top: 0;
+    font-size: 35px;
+}
+.select {
+    list-style: none;
+    color: var(--pale-blue);
+    font-weight: 300;
+    padding: var(--card-padding);
+    margin: 0;
+}
+li {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#work {
+    background: url(./images/icon-work.svg) 100px var(--light-red) no-repeat;
+    background-position: right 10px top -15px;
+}
+#exercise {
+    background: url(./images/icon-exercise.svg) 100px var(--lime-green)
+        no-repeat;
+    background-position: right 10px top 0px;
+}
+#play {
+    background: url(./images/icon-play.svg) 100px var(--soft-blue) no-repeat;
+    background-position: right 10px top -5px;
+}
+#social {
+    background: url(./images/icon-social.svg) 100px var(--violet) no-repeat;
+    background-position: right 10px top 0px;
+}
+#study {
+    background: url(./images/icon-study.svg) 100px var(--red) no-repeat;
+    background-position: right 10px top -10px;
+}
+#self-care {
+    background: url(./images/icon-self-care.svg) 100px var(--soft-orange)
+        no-repeat;
+    background-position: right 10px top -10px;
+}
+
+.card {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: var(--dark-blue);
+    padding: var(--card-padding);
+    transition: background 300ms ease-in;
+    cursor: pointer;
+}
+.card:hover {
+    background: var(--desaturated-blue);
+}
+.title {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ex {
+    cursor: pointer;
+}
+.current {
+    color: white;
+    font-size: 50px;
+    font-weight: 300;
+    margin: 0;
+    margin-top: 25px;
+}
+.previous {
+    color: var(--pale-blue);
+    font-size: 14px;
+}
+
+.selected {
+    color: white;
+}
+
+@media (max-width: 786px) {
+    .dashboard {
+        grid-template-columns: none;
+        max-width: 320px;
+        height: auto;
+    }
+    .card__owner {
+        max-height: 180px;
+    }
+    .select {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 17.5px;
+        padding-bottom: 17.5px;
+    }
+    .owner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    li {
+        margin-bottom: 0;
+    }
+    #owner {
+        margin-bottom: 0;
+        width: 70px;
+        height: 70px;
+    }
+    .content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hilight {
+        font-size: 22px;
+    }
+    .dashboard-right {
+        grid-template-rows: none;
+    }
+    .cards {
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 180px);
+        min-height: 200px;
+        margin-bottom: 20px;
+    }
+    .current {
+        font-size: 33px;
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

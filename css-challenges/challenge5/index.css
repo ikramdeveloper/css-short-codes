@@ -1,0 +1,22 @@
+body {
+  background-color: #d25b70;
+}
+.outer {
+  position: relative;
+  margin: 200px auto 0;
+  background-color: #f7f3da;
+  width: 100px;
+  aspect-ratio: 1;
+}
+.one {
+  width: 60%;
+  aspect-ratio: 1;
+  background-color: #6cb3a9;
+  transform: translate(-35px, -70px) rotate(38deg);
+}
+.two {
+  width: 75%;
+  aspect-ratio: 1;
+  background-color: #f6df96;
+  transform: translate(52px, -150px) rotate(306deg);
+}

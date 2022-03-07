@@ -1,0 +1,44 @@
+body {
+  background-color: #243d83;
+  height: 100vh;
+  margin: 0;
+}
+.outer {
+  position: relative;
+  background-color: #243d83;
+  width: 120px;
+  aspect-ratio: 1;
+  transform: rotate(45deg);
+  margin: 35% auto;
+  display: flex;
+}
+.outer-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #243d83;
+}
+.inner {
+  position: relative;
+  background-color: #eeb850;
+  width: 50%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  margin: auto;
+  z-index: 99;
+}
+.outer::before,
+.outer::after {
+  position: absolute;
+  content: "";
+  width: 95%;
+  height: 200%;
+  background-color: #6592cf;
+  border-radius: 100vw;
+  z-index: -1;
+  left: 2.5%;
+  top: -50%;
+}
+.outer::before {
+  transform: rotate(90deg);
+}

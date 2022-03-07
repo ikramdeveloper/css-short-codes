@@ -1,0 +1,40 @@
+body {
+  background-color: #191919;
+  margin: 0;
+  padding: 0;
+}
+div.parent {
+  position: relative;
+  margin: 20px auto 0;
+  height: 694px;
+  width: 785px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.child {
+  width: 280px;
+  height: 50px;
+  border-radius: 100vw;
+  position: absolute;
+}
+.a {
+  left: 95px;
+}
+.c {
+  left: 410px;
+}
+.b {
+  top: 125px;
+}
+.d {
+  top: 440px;
+}
+div.child:nth-child(even) {
+  background-color: #a64942;
+  transform: rotate(90deg);
+}
+div.child:nth-child(odd) {
+  background-color: #fe5f55;
+  top: 283px;
+}

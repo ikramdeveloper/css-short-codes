@@ -1,0 +1,30 @@
+body {
+  background-color: #191919;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+div {
+  position: relative;
+  border: 25px solid #8f8f8f;
+  width: 65px;
+  aspect-ratio: 1;
+  /* margin: 1px; */
+  margin-inline: 2px;
+  border-radius: 50%;
+}
+.a {
+  border-color: #714867;
+}
+.b::after {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 90px;
+  border-radius: 100vw;
+  background-color: #8f8f8f;
+  right: -25px;
+  top: -50px;
+}
